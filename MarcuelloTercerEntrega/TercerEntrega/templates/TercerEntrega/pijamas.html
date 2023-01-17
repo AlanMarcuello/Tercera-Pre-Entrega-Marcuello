@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "TercerEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+  
+   <h1>Pijamas</h1>
+   <p>Pijamas diponibles:</p>
+
+{% for p in pijam %}
+
+<li>{{p.nombreModelo}}</li>
+
+{% endfor %}
+
+
+{% endblock %}

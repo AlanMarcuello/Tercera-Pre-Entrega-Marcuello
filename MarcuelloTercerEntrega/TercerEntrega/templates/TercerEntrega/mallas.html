@@ -1,0 +1,26 @@
+{% extends "TercerEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Mallas</h1>
+    
+    <p>Mallas diponibles:</p>
+
+    {% for i in mall %}
+
+    <li>{{i.nombreModelo}}</li>
+
+    {% endfor %}
+    
+    <p>Buscar por tipo de malla (Bikini/Enteriza):</p>
+ 
+    <form action="/resultadoBusqueda/" method="GET"> 
+
+        <input type="text" name="info" id="info">
+  
+      <input type="submit" value="Buscar" />
+
+{% endblock %}

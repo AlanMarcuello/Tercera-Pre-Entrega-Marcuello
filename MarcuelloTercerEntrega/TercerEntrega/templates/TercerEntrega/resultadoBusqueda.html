@@ -1,0 +1,26 @@
+{% extends "TercerEntrega/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+{% if malla %}
+
+<p> Estamos buscando: {{info}} </p>
+
+<ul>
+{% for i in malla %}
+   <li> {{i.nombreModelo}} </li>
+   
+{% endfor %}
+
+</ul>
+
+{% else %}
+</p> No hay datos con esa descripción. </p>
+
+{% endif %}
+
+<p style="color: red;"> {{respuesta}}</p> 
+
+<a href='/mallas' >volver</a>
+
+{% endblock %}
