@@ -1,6 +1,6 @@
 Marcuello Tercer Entrega:
 
-El pryecto se basa en un microenprendimiento dedicado a la confección de mallas, pijamas y ropa interior para mujeres (Esas, justamente, son las 3 clases que se crearon).
+El proyecto se basa en un microenprendimiento dedicado a la confección de mallas, pijamas y ropa interior para mujeres (Esas, justamente, son las 3 clases que se crearon).
 
 Funcionalidades:
 
@@ -19,4 +19,6 @@ http://127.0.0.1:8000/buscar/ ---> su propia pestaña en la interfaz
 http://127.0.0.1:8000/mallas ---> dentro de la interfaz de mallas
 
 La funcion permite encontrar que modelos de mayas corresponden a Bikinis y cuales a Enterizas.
+
+Cree el usuario para administrador facundocaceres y la contraseña es Coder_1234
 
