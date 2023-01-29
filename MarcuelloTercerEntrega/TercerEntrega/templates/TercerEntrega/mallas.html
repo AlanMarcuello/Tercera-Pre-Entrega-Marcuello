@@ -11,11 +11,12 @@
 
     {% for i in mall %}
 
-    <li>{{i.nombreModelo}}</li>
+    <li>Modelo: {{i.nombreModelo}}</li>
+    <li>Colores Disponibles: {{i.colores}}</li><br/>
 
     {% endfor %}
     
-    <p>Buscar por tipo de malla (Bikini/Enteriza):</p>
+    <p><br/>Buscar por tipo de malla (Bikini/Enteriza):</p>
  
     <form action="/resultadoBusqueda/" method="GET"> 
 

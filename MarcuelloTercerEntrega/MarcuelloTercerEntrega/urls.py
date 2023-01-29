@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from TercerEntrega import views
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +27,18 @@ urlpatterns = [
     path('mallasFormulario', views.mallasFormulario, name="MallasFormulario"),
     path('pijamasFormulario', views.pijamaFormulario, name="PijamasFormulario"),
     path('ropainteriorFormulario', views.ropainteriorFormulario, name="RopaInteriorFormulario"),
-     path('buscar/', views.busquedaTalle, name="Buscar"),
+    path('buscar/', views.busquedaTalle, name="Buscar"),
     path('resultadoBusqueda/', views.buscar, name="ResultadoBusqueda"),
+    path('login', views.login_request, name="Login"),
+    path('register', views.register, name='Register'),
+    path('editarPerfil', views.editarPerfil, name="EditarPerfil"),
+    path('logout', LogoutView.as_view(template_name='TercerEntrega/logout.html'), name='Logout'),
+    path('eliminarPerfil', views.eliminarusuario, name="EliminarPerfil"),
+    path('eliminarMallas/<mall_nombreModelo>/', views.eliminarMallas, name="EliminarMallas"),
+    path('eliminarRopa/<ropa_nombreModelo>/', views.eliminarRopainterior, name="EliminarRopaInterior"),
+    path('eliminarPijama/<pijam_nombreModelo>/', views.eliminarPijama, name="EliminarPijama"),
+    path('editarMallas/<mall_nombreModelo>/', views.editarMallas, name="EditarMallas"),
+    path('editarRopainterior/<rop_nombreModelo>/', views.editarRopainterior, name="EditarRopaInterior"),
+    path('editarpijamas/<pijam_nombreModelo>/', views.editarPijama, name="EditarPijamas"),
+    path('nosotros', views.nosotros, name="Nosotros"),
 ]
